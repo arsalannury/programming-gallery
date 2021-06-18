@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1400px;
+    max-height: 1200px;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    direction: rtl;
+    font-family:monospace;
+    font-weight: bold;
+}
+$map-one-style:(
+color:#fa3463,
+colortwo:#2b2c28,
+colorthree:#129865,
+colo4:#fca311,
+color5:#343a4d,
+color6:#013a63,
+color7:#2ec4b6,
+color8:#495057,
+);
+$bor:"border";
+$mar:"margin";
+$padd:"padding";
+$col:"color";
+$f-size:"font-size";
+$wi:"width";
+
+@mixin image-style($width,$height,$radius) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    box-shadow: 0 2px 3px #2b2c28;
+    
+}
+@mixin Qstyle {
+    #{$f-size}:.9em;
+    font-weight: bold;
+    // letter-spacing: .1em;
+}
+@mixin display($dir,$just,$items,$wrap) {
+  display: flex;
+  flex-direction:$dir;
+  justify-content:$just;
+  align-items:$items;
+  flex-wrap:$wrap;
+}
+@mixin sections-box() {
+ #{$bor}-bottom:1px solid map-get($map:$map-one-style , $key:color5 );
+}
+@mixin section1to6 {
+  #{$mar}:0 7px 0 7px;
+}
+@mixin hover($radius,$bottom) {
+  border-radius: $radius;
+  border-bottom: $bottom;
+}
+@mixin trans {
+  transition: border-radius 2s ease-in,border-bottom 2s ease-in;
+}
+@mixin ihover($color) {
+  transition: color 2s ease;
+  cursor: pointer;
+   &:hover{
+     color: $color;
+   }
+}
+body{
+  background-image: linear-gradient(to bottom,#ced4da,#ffef9f);
+    section{
+      display: grid;
+      grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+      grid-template-rows:repeat(2,400px);
+      grid-auto-rows: 400px;
+      gap: 5px;
+    }
+    
+}
+
+
+
+.section1-image{
+  @include sections-box();
+  @include trans();
+  &:hover{
+    @include hover(10px, 1px solid #bf0603);
+  }
+  #{$mar}:1px 10px 10px 0;
+   @include display(column-reverse,space-around,center,nowrap);
+   img{
+    
+    @include image-style(100%,auto,15px);
+    transition:transform 2s ease-out;
+    &:hover{
+      transform: translate(0,40px);
+    }
+   }
+   p{
+    color: map-get($map:$map-one-style , $key:color5);
+    @include Qstyle();
+    @include section1to6()
+  }
+  i{
+    #{$f-size}:1.1em;
+   color: map-get($map:$map-one-style , $key:colo2);
+   @include section1to6();
+   @include ihover(#bf0603);
+  }
+  .section1{
+    @include display(row,space-between,center,nowrap);
+  }
+}
+
+//section2-image !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.section2-image{
+  @include sections-box();
+  @include trans();
+  &:hover{
+  @include hover(10px, 1px solid #1982c4);
+  }
+  #{$mar}:-20px 10px 60px 0;
+  @include display(column-reverse,space-around,center,nowrap);
+  img{
+   @include image-style(100%,50%,15px);
+   transition:transform 2s ease-out;
+   &:hover{
+     transform: rotateX(180deg);
+   }
+  }
+  p{
+    color: map-get($map:$map-one-style , $key:color8 );
+    @include Qstyle();
+    @include section1to6()
+  }
+  i{
+    #{$f-size}:1.1em;
+   color: map-get($map:$map-one-style , $key:colo2);
+   @include section1to6();
+   @include ihover(#1982c4);
+  }
+  .section2{
+    #{$mar}:-80px 0 -20px 0 ;
+    @include display(row,space-between,center,nowrap);
+  }
+}
+
+//section3-image !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.section3-image{
+  @include trans();
+  &:hover{
+    @include hover(10px,1px solid #6a4c93);
+  }
+  @include sections-box();
+  #{$mar}:8px 10px 10px 10px;
+  @include display(column-reverse,space-around,center,nowrap);
+  img{
+   @include image-style(100%,80%,15px);
+   transition: transform 2s ease-out;
+   &:hover{
+     transform: scale(0.8,0.7);
+   }
+  }
+  p{
+    color: map-get($map:$map-one-style , $key:color8 );
+    @include Qstyle();
+    @include section1to6();
+  }
+  i{
+    #{$f-size}:1.1em;
+    @include section1to6();
+    @include ihover(#6a4c93);
+   color: map-get($map:$map-one-style , $key:colo2 );
+  }
+  .section3{
+    @include display(row,space-between,center,nowrap);
+  }
+}
+
+//section4-image !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.section4-image{
+  @include trans();
+  &:hover{
+    @include hover(10px, 1px solid #6a4c93)
+  }
+  @include sections-box();
+  #{$mar}:10px 10px 60px 10px;
+  @include display(column-reverse,space-around,center,nowrap);
+  img{
+   @include image-style(100%,70%,15px);
+   transition: transform 2s ease-out;
+   &:hover{
+     transform: rotateY(60deg);
+     cursor: pointer;
+   }
+  }
+  p{
+    color: map-get($map:$map-one-style , $key:color8 );
+    @include Qstyle();
+    @include section1to6();
+  }
+  i{
+    #{$f-size}:1.1em;
+   color: map-get($map:$map-one-style , $key:colo2 );
+   @include section1to6();
+   @include ihover(#6a4c93);
+  }
+  .section4{
+    @include display(row,space-between,center,nowrap);
+  }
+}
+
+//section5-image !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.section5-image{
+  @include trans();
+  &:hover{
+    @include hover(10px,1px solid #19647e )
+  }
+  @include sections-box();
+  #{$mar}:10px 10px 40px 10px;
+  @include display(column-reverse,space-around,center,nowrap);
+  img{
+   @include image-style(100%,130% ,15px);
+   #{$mar}-bottom:15px;
+   transition: transform 2s ease-in;
+   &:hover{
+     transform: translateY(-30px);
+     cursor: pointer;
+   }
+  }
+  p{
+    @include section1to6();
+    color: map-get($map:$map-one-style , $key:color8 );
+    @include Qstyle();
+    #{$mar}-bottom:15px;
+  }
+  i{
+    #{$f-size}:1.1em;
+    @include section1to6();
+   color: map-get($map:$map-one-style , $key:colo2);
+   #{$mar}-bottom:15px;
+   @include ihover(#19647e);
+  }
+  .section5{
+    @include display(row,space-between,center,nowrap);
+  }
+}
+
+//section6-image !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.section6-image{
+  @include trans();
+  &:hover{
+    @include hover(10px, 1px solid #9d4edd);
+  }
+  @include sections-box();
+  #{$mar}: 6px 10px 60px 10px;
+  @include display(column-reverse,space-around,center,nowrap);
+  img{
+   @include image-style(100%,65%,15px);
+   transition: transform 2s ease-out;
+   &:hover{
+     transform: rotateY(60deg);
+     cursor: pointer;
+   }
+  }
+  p{
+    #{$f-size}:1.1em;
+    color: map-get($map:$map-one-style , $key:color8 );
+    @include Qstyle();
+    @include section1to6();
+  }
+  i{
+    #{$f-size}:1.1em;
+    @include section1to6();
+    @include ihover(#9d4edd);
+   color: map-get($map:$map-one-style , $key:colo2);
+  }
+  .section6{
+    @include display(row,space-between,center,nowrap);
+  }
+}
+
+//responsive by media query !!!!!!!!!!!!!
+@media screen and (max-width:700px){
+  body{
+    background-image: none;
+    background-color:#ced4da ;
+    section{
+      #{$padd}:20px;
+      // grid-template-rows:repeat(2,300px);
+      // grid-auto-rows: 300px;
+    }
+  }
+//   .section1-image{
+// padding: 25px;
+//   }
+//   .section2-image{
+//     padding: 25px;
+//   }
+//   .section3-image{
+//     padding: 25px;
+//   }
+//   .section4-image{
+//     padding: 25px;
+//   }
+//   .section5-image{
+//     padding: 25px;
+//   }
+//   .section6-image{
+//     padding: 25px;
+//   }
+}
+
+
+@media screen and (max-width:500px) {
+  body{
+    background-image: none;
+    background-color:#ced4da ;
+  }
+  section{
+    #{$padd}: 15px;
+   
+  }
+  .section1-image{
+   #{$padd}-left: 7px;
+   img{
+    transition:transform 2s ease-out;
+    &:hover{
+      transform: translate(0,25px);
+    }
+   }
+  }
+  .section2-image{
+    #{$padd}-left: 5px;
+   }
+   .section3-image{
+    img{
+      #{$mar}-bottom:60px;
+    }
+     .section3{
+       #{$mar}-bottom:30px;
+     }
+    
+   }
+   .section4-image{
+     #{$padd}-right:4px;
+   }
+   .section5-image{
+    img{
+      #{$mar}-top:-30px;
+      #{$mar}-bottom:20px;
+    }
+   }
+   .section6-image{
+    #{$padd}-right:4px;
+   }
+}
+
+@media screen and (max-width:415px){
+  .section1-image{
+    #{$wi}: 90%;
+  }
+  .section2-image{
+    #{$wi}: 90%;
+  } 
+  .section3-image{
+    #{$wi}: 90%;
+  }
+  .section4-image{
+    #{$wi}: 90%;
+  }
+  .section5-image{
+    #{$wi}: 90%;
+  }
+  .section6-image{
+    #{$wi}: 90%;
+  }
+}
+
+@media screen and (max-width:375px) {
+ .section1-image{
+  #{$wi}: 80%;
+  .section1{
+   #{$mar}-bottom:30px;
+  }
+ }
+ .section2-image{
+  #{$wi}: 80%;
+ }
+ .section3-image{
+  #{$wi}: 80%;
+ }
+ .section4-image{
+  #{$wi}: 80%;
+ }
+ .section5-image{
+  #{$wi}: 80%;
+ }
+ .section6-image{
+  #{$wi}: 80%;
+ }
+}
