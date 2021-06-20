@@ -355,96 +355,183 @@ body section {
   flex-wrap: nowrap;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: none;
+    background-color: #ced4da;
+  }
+  .section1-image {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .section1-image img:hover {
+    transform: translate(0, 13px);
+  }
+  .section2-image {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .section3-image {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .section4-image {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .section5-image {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .section5-image img {
+    height: 70%;
+    margin-top: 10px;
+  }
+  .section5-image img:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+  .section6-image {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 805px) {
   body {
     background-image: none;
     background-color: #ced4da;
   }
   body section {
-    padding: 20px;
+    grid-template-rows: repeat(2, 360px);
+    grid-auto-rows: 360px;
+  }
+  .section1-image {
+    width: 57%;
+    margin: 0 auto 0 auto;
+  }
+  .section1-image img:hover {
+    transform: translate(0, 13px);
+  }
+  .section2-image {
+    width: 57%;
+    margin: 0 auto 0 auto;
+  }
+  .section3-image {
+    width: 57%;
+    margin: 0 auto 0 auto;
+  }
+  .section4-image {
+    width: 57%;
+    margin: 0 auto 0 auto;
+  }
+  .section5-image {
+    width: 57%;
+    margin: 0 auto 0 auto;
+  }
+  .section5-image img {
+    height: 70%;
+    margin-top: 10px;
+  }
+  .section5-image img:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+  .section6-image {
+    width: 57%;
+    margin: 0 auto 0 auto;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     background-image: none;
     background-color: #ced4da;
   }
-  section {
-    padding: 15px;
+  body section {
+    grid-template-rows: repeat(2, 360px);
+    grid-auto-rows: 360px;
   }
   .section1-image {
-    padding-left: 7px;
-  }
-  .section1-image img {
-    transition: transform 2s ease-out;
+    width: 70%;
+    margin: 0 auto 0 auto;
   }
   .section1-image img:hover {
-    transform: translate(0, 25px);
+    transform: translate(0, 20px);
   }
   .section2-image {
-    padding-left: 5px;
-  }
-  .section3-image img {
-    margin-bottom: 60px;
-  }
-  .section3-image .section3 {
-    margin-bottom: 30px;
-  }
-  .section4-image {
-    padding-right: 4px;
-  }
-  .section5-image img {
-    margin-top: -30px;
-    margin-bottom: 20px;
-  }
-  .section6-image {
-    padding-right: 4px;
-  }
-}
-
-@media screen and (max-width: 415px) {
-  .section1-image {
-    width: 90%;
-  }
-  .section2-image {
-    width: 90%;
+    width: 70%;
+    margin: 0 auto 0 auto;
   }
   .section3-image {
-    width: 90%;
+    width: 70%;
+    margin: 0 auto 0 auto;
   }
   .section4-image {
-    width: 90%;
+    width: 70%;
+    margin: 0 auto 0 auto;
   }
   .section5-image {
-    width: 90%;
+    width: 70%;
+    margin: 0 auto 0 auto;
+  }
+  .section5-image img {
+    height: 70%;
+    margin-top: 10px;
+  }
+  .section5-image img:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
   }
   .section6-image {
-    width: 90%;
+    width: 70%;
+    margin: 0 auto 0 auto;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .section1-image {
-    width: 80%;
+  body {
+    background-image: none;
+    background-color: #ced4da;
   }
-  .section1-image .section1 {
-    margin-bottom: 30px;
+  body section {
+    grid-template-rows: repeat(2, 360px);
+    grid-auto-rows: 360px;
+  }
+  .section1-image {
+    width: 70%;
+    margin: 0 42px 0 0;
+  }
+  .section1-image img {
+    margin-bottom: -20px;
   }
   .section2-image {
-    width: 80%;
+    width: 70%;
+    margin: 0 42px 0 0;
   }
   .section3-image {
-    width: 80%;
+    width: 70%;
+    margin: 0 42px 0 0;
   }
   .section4-image {
-    width: 80%;
+    width: 70%;
+    margin: 0 42px 0 0;
   }
   .section5-image {
-    width: 80%;
+    width: 70%;
+    margin: 0 42px 0 0;
+  }
+  .section5-image img {
+    height: 70%;
+    margin-top: 10px;
+  }
+  .section5-image img:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
   }
   .section6-image {
-    width: 80%;
+    width: 70%;
+    margin: 0 42px 0 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
