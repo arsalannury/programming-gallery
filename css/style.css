@@ -355,6 +355,51 @@ body section {
   flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 1209px) {
+  body {
+    background-image: none;
+    background-color: #ced4da;
+  }
+  .section1-image {
+    width: 84%;
+    margin: 0 auto 0 auto;
+  }
+  .section1-image img {
+    width: 95%;
+  }
+  .section1-image img:hover {
+    transform: translate(0, 13px);
+  }
+  .section2-image {
+    width: 84%;
+    margin: 0 auto 0 auto;
+  }
+  .section3-image {
+    width: 84%;
+    margin: 0 auto 0 auto;
+  }
+  .section4-image {
+    width: 84%;
+    margin: 0 auto 0 auto;
+  }
+  .section5-image {
+    width: 84%;
+    margin: 0 auto 20px auto;
+  }
+  .section5-image img {
+    height: 70%;
+    margin-top: 10px;
+  }
+  .section5-image img:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+  .section6-image {
+    width: 84%;
+    margin: 0 auto 20px auto;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   body {
     background-image: none;
@@ -381,7 +426,7 @@ body section {
   }
   .section5-image {
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 20px auto;
   }
   .section5-image img {
     height: 70%;
@@ -393,11 +438,11 @@ body section {
   }
   .section6-image {
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 20px auto;
   }
 }
 
-@media screen and (max-width: 805px) {
+@media screen and (max-width: 806px) {
   body {
     background-image: none;
     background-color: #ced4da;

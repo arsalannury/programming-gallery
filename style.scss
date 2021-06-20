@@ -281,6 +281,50 @@ body{
 }
 
 //responsive by media query !!!!!!!!!!!!!
+@media screen and (max-width:1209px){
+  body{
+    background-image: none;
+    background-color:#ced4da;
+  }
+  .section1-image{
+    #{$wi}: 84%;
+    #{$mar}:0 auto 0 auto ;
+    img{
+      #{$wi}:95%;
+      &:hover{
+        transform: translate(0,13px);
+      }
+    }
+  }
+  .section2-image{
+    #{$wi}: 84%;
+    #{$mar}:0 auto 0 auto ;
+  }
+  .section3-image{
+    #{$wi}: 84%;
+    #{$mar}:0 auto 0 auto ;
+  }
+  .section4-image{
+    #{$wi}: 84%;
+    #{$mar}:0 auto 0 auto ;
+  }
+  .section5-image{
+    #{$wi}: 84%;
+    #{$mar}:0 auto 20px auto ;
+    img{
+      height:70%;
+      #{$mar}-top:10px;
+      &:hover{
+        transform: translateY(-20px);
+        cursor: pointer;
+      }
+    }
+  }
+  .section6-image{
+    #{$wi}: 84%;
+    #{$mar}:0 auto 20px auto ;
+  }
+}
 
 @media screen and (max-width:1000px){
   body{
@@ -310,7 +354,7 @@ body{
 }
 .section5-image{
   #{$wi}: 90%;
-  #{$mar}:0 auto 0 auto ;
+  #{$mar}:0 auto 20px auto ;
   img{
     height:70%;
     #{$mar}-top:10px;
@@ -322,17 +366,18 @@ body{
 }
 .section6-image{
   #{$wi}: 90%;
-  #{$mar}:0 auto 0 auto ;
+  #{$mar}:0 auto 20px auto ;
 }
 }
 
-@media screen and (max-width:805px){
+@media screen and (max-width:806px){
   body{
     background-image: none;
     background-color:#ced4da;
   section{
     grid-template-rows:repeat(2,360px);
       grid-auto-rows: 360px;
+      
   }
 }
   .section1-image{
@@ -372,6 +417,7 @@ body{
   .section6-image{
     #{$wi}: 57%;
     #{$mar}:0 auto 0 auto ;
+    
   }
 }
 
